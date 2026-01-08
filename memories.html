@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Memories 😄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="memories.css">
+</head>
+<body class="page fade-container">
+
+  <!-- Music button -->
+  <button class="music-btn" onclick="toggleMusic()" aria-label="Toggle music">🎶</button>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating hearts background -->
+  <div class="hearts hearts-left"></div>
+  <div class="hearts hearts-right"></div>
+
+  <!-- Main content -->
+  <main class="card memories-card">
+    <h1>Some Fun Moments 📸</h1>
+    <p class="memories-subtitle">
+      Little snapshots of time that always make us smile.
+    </p>
+
+    <div class="gallery">
+      <div class="polaroid">
+        <div class="polaroid-img">
+          <img src="photo1.jpg" alt="Memory 1">
+        </div>
+        <span class="caption">Our silly laughs 🤭</span>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-img">
+          <img src="photo2.jpg" alt="Memory 2">
+        </div>
+        <span class="caption">Your favourite smile ✨</span>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-img">
+          <img src="photo3.jpg" alt="Memory 3">
+        </div>
+        <span class="caption">A moment to keep 💙</span>
+      </div>
+    </div>
+
+   <button class="next" id="nextMemoriesBtn">Next 🎈</button>
+  </main>
+
+  <script src="memories.js"></script>
+</body>
+</html>

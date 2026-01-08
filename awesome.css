@@ -1,0 +1,55 @@
+/* Awesome card adjust */
+.awesome-card {
+  max-width: 540px;
+}
+
+/* Subtitle */
+.awesome-subtitle {
+  margin-top: 0.4rem;
+  margin-bottom: 1.4rem;
+  font-size: 0.98rem;
+  opacity: 0.9;
+}
+
+/* Styled list */
+.awesome-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.awesome-list li {
+  position: relative;
+  padding-left: 2.1rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.98rem;
+}
+
+/* Emoji bullets using ::before */
+.awesome-list li::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  top: 0.04rem;
+  font-size: 1.1rem;
+}
+
+/* Slight stagger animation on appear */
+.awesome-list li {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: list-in 0.5s ease forwards;
+}
+
+.awesome-list li:nth-child(1) { animation-delay: 0.05s; }
+.awesome-list li:nth-child(2) { animation-delay: 0.15s; }
+.awesome-list li:nth-child(3) { animation-delay: 0.25s; }
+.awesome-list li:nth-child(4) { animation-delay: 0.35s; }
+
+@keyframes list-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

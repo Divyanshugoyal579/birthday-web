@@ -1,0 +1,83 @@
+/* Memories subtitle */
+.memories-subtitle {
+  margin-top: 0.4rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.98rem;
+  opacity: 0.9;
+}
+
+/* Gallery layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Polaroid card */
+.polaroid {
+  background: #fdfdfd;
+  color: #333333;
+  padding: 0.6rem 0.6rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+  max-width: 180px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.polaroid:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+/* Image wrapper with zoom */
+.polaroid-img {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.polaroid-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+/* Hover effect: zoom + lift */
+.polaroid:hover {
+  transform: translateY(-6px) rotate(0deg) scale(1.03);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.55);
+}
+
+.polaroid:hover .polaroid-img img {
+  transform: scale(1.08);
+}
+
+/* Caption under photo */
+.caption {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Make memories card a bit wider on large screens */
+.memories-card {
+  max-width: 640px;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .gallery {
+    gap: 1.1rem;
+  }
+
+  .polaroid {
+    max-width: 150px;
+  }
+}

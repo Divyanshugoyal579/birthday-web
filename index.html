@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Gift for Afrah 🎁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="wrapper">
+
+  <!-- Music button -->
+  <button class="music-btn" onclick="toggleMusic()" aria-label="Toggle music">🎶</button>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Background hearts -->
+  <div class="hearts hearts-left"></div>
+  <div class="hearts hearts-right"></div>
+
+  <!-- Main content -->
+  <main class="content">
+    <h1 class="title">A Gift for Afrah 🎁</h1>
+    <p class="subtitle">Tap the gift and wait for the magic ✨</p>
+
+    <div class="gift-container">
+      <div class="gift-box" onclick="openGift()">
+        <div class="gift-lid"></div>
+        <div class="gift-body"></div>
+        <div class="gift-ribbon-vertical"></div>
+        <div class="gift-ribbon-horizontal"></div>
+        <span class="gift-emoji">🎁</span>
+        <p class="gift-text">Tap to open your gift 🎉</p>
+        <p id="countdown" class="countdown"></p>
+      </div>
+
+      <div id="message" class="message hidden">
+        
+        <p>You are the most special part of our group</p>
+        <p>Thank you for being you! 😄</p>
+        <button id="nextBtn" class="next">Unwrap more 🎀</button>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+  
+
+</body>
+</html>
